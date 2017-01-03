@@ -1,6 +1,6 @@
 #Vim Tutorial
 **h** __j__ **k** __k__ represent **left down up right**  
-**x** deletes charcter  
+**x** deletes character  
 **u** to undo the last command, **U** to fix the whole line, undo the undo's **ctrl+R**  
 press **i** to insert  
 press **Esc** to escape to nomal mode  
@@ -23,4 +23,8 @@ press motion button without an operator will move the cursor as specified
 2e, 3b, 0, $, 3w, d2w, d2e, d2b, dd, 2dd, 2j, 5k, 5h, 7l  
 
 ###the *put* command
-
+type *p* to put previously deleted text after the current cursor  
+**example**  
+d, p; dd, p  
+###the *replace* command
+type *r+\** to replace the charactor at the cursor with charactor \*
