@@ -27,4 +27,27 @@ type *p* to put previously deleted text after the current cursor
 **example**  
 d, p; dd, p  
 ###the *replace* command
-type "__r+*__" to replace the character at the cursor with character *
+type "__r+*__" to replace the character at the cursor with character *  
+###the *change* command
+type **ce** to change until the end of a word  
+*note*: it is a insert mode operator which deletes the word and place user in **insert** mode
+###the *change* operator
+type **c** to change used with the same motions as delete **d**  
+__c + [number] + motion__  
+**example**  
+cb, ce, c$, c0, cw  
+
+
+###cursor location and file status
+**ctrl + G** to show location and the file status
+**G** to move to the bottom of the file  
+**gg** to move to the start of the file
+**number + G** to move to the line number specified 
+###the *search* command
+Type / followed by a phrase to search for the phrase, then type *n* for next, type *N* for previous  
+Search backword direction using ? instead of /  
+to go back to where we came from press "*ctrl + o*", "*ctrl + I*" to go forword
+
+###vimtutor 4.3 to be continued...
+
+
