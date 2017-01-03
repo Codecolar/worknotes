@@ -22,5 +22,5 @@ press motion button without an operator will move the cursor as specified
 **example**  
 2e, 3b, 0, $, 3w, d2w, d2e, d2b, dd, 2dd, 2j, 5k, 5h, 7l  
 
-###the **put** command
+###the __put__ command
 
