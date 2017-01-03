@@ -27,4 +27,4 @@ type *p* to put previously deleted text after the current cursor
 **example**  
 d, p; dd, p  
 ###the *replace* command
-type "*r+**" to replace the character at the cursor with charactor \*
+type "__r+*__" to replace the character at the cursor with character *
