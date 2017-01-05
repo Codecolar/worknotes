@@ -114,3 +114,8 @@ Ctrl-I  jump to next cursor position (after Ctrl-O)
 Ctrl-Y  move view pane up  
 Ctrl-E  move view pane down  
 
+###multi tabs
+:tabnew filename - new tab  
+:tabn - next tab  
+:tabp - previous tab  
+
