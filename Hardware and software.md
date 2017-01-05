@@ -10,4 +10,6 @@ http://searchstorage.techtarget.com/definition/I-O-virtualization-IOV
 ###Virtulization
 https://www.infoq.com/articles/virtualization-intro  
 
+###SR-IOV
+http://blog.scottlowe.org/2009/12/02/what-is-sr-iov/
 
