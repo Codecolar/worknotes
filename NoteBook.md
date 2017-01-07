@@ -13,4 +13,8 @@
 感知是大家最后获得的东西，也恰恰是最重要的东西。
 
 ###Learning VIM
-Get command vimtutor from info vim
+Get command vimtutor from info vim  
+
+The GNU Coding Standards list the names of some commonly used command-line
+options.  
+info “(standards)User Interfaces”
