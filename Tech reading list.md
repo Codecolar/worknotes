@@ -9,6 +9,5 @@ linux memory model - http://www.wowotech.net/memory_management/memory_model.html
                    - https://gist.github.com/fisheuler/2816fc8e95a86d7c5699  
 
 blogs - http://duartes.org/gustavo/blog/  
-linux insides - https://0xax.gitbooks.io/linux-insides/content/SysCall/syscall-1.html?q=  
-
-
+linux insides - https://0xax.gitbooks.io/linux-insides/content/SysCall/syscall-1.html?q=  
+跟我一起学Makefile  
