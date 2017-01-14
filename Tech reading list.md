@@ -12,4 +12,5 @@ blogs - http://duartes.org/gustavo/blog/
 linux insides - https://0xax.gitbooks.io/linux-insides/content/SysCall/syscall-1.html?q=         
 跟我一起学Makefile   
 http://mrbook.org/blog/big-robot-studios/     
-
+makefile debug - http://www.drdobbs.com/tools/debugging-makefiles/197003338?pgno=2      
+dpdk、SDN、SR-IOV、   
