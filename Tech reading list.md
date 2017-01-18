@@ -14,3 +14,5 @@ linux insides - https://0xax.gitbooks.io/linux-insides/content/SysCall/syscall-1
 http://mrbook.org/blog/big-robot-studios/     
 makefile debug - http://www.drdobbs.com/tools/debugging-makefiles/197003338?pgno=2      
 dpdk、SDN、SR-IOV、PCIe    
+blogs - http://opensourceforu.com/tag/linux-device-drivers-series/page/2/     
+
