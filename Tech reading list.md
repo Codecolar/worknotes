@@ -16,3 +16,5 @@ makefile debug - http://www.drdobbs.com/tools/debugging-makefiles/197003338?pgno
 dpdk、SDN、SR-IOV、PCIe    
 blogs - http://opensourceforu.com/tag/linux-device-drivers-series/page/2/     
 
+书籍：    
+大教堂与集市、黑客圈简史、开垦心智层、魔法锅、黑客的反击
