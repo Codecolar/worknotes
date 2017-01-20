@@ -14,7 +14,9 @@ linux insides - https://0xax.gitbooks.io/linux-insides/content/SysCall/syscall-1
 http://mrbook.org/blog/big-robot-studios/     
 makefile debug - http://www.drdobbs.com/tools/debugging-makefiles/197003338?pgno=2      
 dpdk、SDN、SR-IOV、PCIe    
-blogs - http://opensourceforu.com/tag/linux-device-drivers-series/page/2/     
+blogs - http://opensourceforu.com/tag/linux-device-drivers-series/page/2/   
+http://beej.us/net2/html/index.html    
+
 
 书籍：    
 大教堂与集市、黑客圈简史、开垦心智层、魔法锅、黑客的反击
