@@ -15,7 +15,9 @@ http://mrbook.org/blog/big-robot-studios/
 makefile debug - http://www.drdobbs.com/tools/debugging-makefiles/197003338?pgno=2      
 dpdk、SDN、SR-IOV、PCIe    
 blogs - http://opensourceforu.com/tag/linux-device-drivers-series/page/2/   
-http://beej.us/net2/html/index.html    
+http://beej.us/net2/html/index.html    
+linux device driver chapter by chapter summery - http://www.cnblogs.com/shenhaocn/category/288699.html      
+
 
 
 书籍：    
