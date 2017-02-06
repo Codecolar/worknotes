@@ -21,6 +21,6 @@ info “(standards)User Interfaces”
 
 ###2.6
 PCIe switch 3 uses - https://www.diodes.com/design/support/technical-articles/pericoms-articles/top-3-uses-for-pci-express-switches/   
-PCIe bar register   
+PCIe bar register     
 linux driver - communication with hardware  
 PCIe driver  
