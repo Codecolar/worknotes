@@ -18,3 +18,9 @@ Get command vimtutor from info vim
 The GNU Coding Standards list the names of some commonly used command-line
 options.  
 info “(standards)User Interfaces”
+
+###2.6
+PCIe switch 3 uses - https://www.diodes.com/design/support/technical-articles/pericoms-articles/top-3-uses-for-pci-express-switches/   
+PCIe bar register   
+linux driver - communication with hardware  
+PCIe driver  
