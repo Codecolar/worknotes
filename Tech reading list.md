@@ -16,7 +16,9 @@ makefile debug - http://www.drdobbs.com/tools/debugging-makefiles/197003338?pgno
 dpdk、SDN、SR-IOV、PCIe    
 blogs - http://opensourceforu.com/tag/linux-device-drivers-series/page/2/   
 http://beej.us/net2/html/index.html    
-linux device driver chapter by chapter summery - http://www.cnblogs.com/shenhaocn/category/288699.html      
+linux device driver chapter by chapter summery - http://www.cnblogs.com/shenhaocn/category/288699.html     
+aws f1 instance - https://www.youtube.com/watch?v=5sDVprory3c      
+
 
 
 
