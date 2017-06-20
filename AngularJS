@@ -1,0 +1,221 @@
+AngularJS:
+AngularJS extends HTML with new attributes. perfect for Single Page Applications
+ directives, expressions, filters, modules, and controllers.
+AngularJS is a JavaScript framework, extends HTML attributes with Directives, 
+and binds data to HTML with Expressions.
+
+AngularJS Extends HTML with ng-directives
+The ng-app directive defines an AngularJS application.
+The ng-model directive binds the value of HTML controls (input, select, textarea) to application data.
+The ng-bind directive binds application data to the HTML view.
+
+Small example:
+AngularJS starts automatically when the web page has loaded.
+<div ng-app="">
+  <p>Name: <input type="text" ng-model="name"></p>
+  <p ng-bind="name"></p>
+</div>
+<div ng-app="" ng-init="firstName='John'">
+The ng-app directive tells AngularJS that the <div> element is the "owner" of an AngularJS application.
+The ng-model directive binds the value of the input field to the application variable name.
+The ng-bind directive binds the innerHTML of the <p> element to the application variable name.
+ng-init directive initializes AngularJS application variables.
+
+AngularJS Expressions
+AngularJS expressions are written inside double braces: {{ expression }}.
+AngularJS will "output" data exactly where the expression is written:
+AngularJS expressions bind AngularJS data to HTML the same way as the ng-bind directive.
+<div ng-app="">
+  <p>Name: <input type="text" ng-model="name"></p>
+  <p>{{name}}</p>
+  <p ng-bind="name"></p>
+</div>
+
+AngularJS Applications
+AngularJS modules define AngularJS applications.
+AngularJS controllers control AngularJS applications.
+The ng-app directive defines the application, the ng-controller directive defines the controller.
+Small example:
+<div ng-app="myApp" ng-controller="myCtrl">
+First Name: <input type="text" ng-model="firstName"><br>
+Last Name: <input type="text" ng-model="lastName"><br>
+<br>
+Full Name: {{firstName + " " + lastName}}
+</div>
+<script>
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope) {
+    $scope.firstName= "John";
+    $scope.lastName= "Doe";
+});
+</script>
+
+AngularJS Expressions:
+ expressions can be written inside double braces: {{ expression }}.
+ expressions can also be written inside a directive: ng-bind="expression".
+ AngularJS will resolve the expression, and return the result exactly wherever the expression is written.
+ <div ng-app="" ng-init="myCol='lightblue'">
+<input style="background-color:{{myCol}}" ng-model="myCol" value="{{myCol}}">
+</div>
+If you remove the ng-app directive, HTML will display the expression as it is, without solving it
+<div ng-app="">
+  <p>My first expression: {{ 5 + 5 }}</p>
+</div>
+
+AngularJS Numbers Strings Objects Arrays are just like JavaScript Numbers Strings Objects Arrays.
+<div ng-app="" ng-init="person={firstName:'John',lastName:'Doe'}">
+<p>The name is {{ person.lastName }}</p>
+</div>
+AngularJS expressions do not support conditionals, loops, and exceptions, while JavaScript expressions do.
+
+AngularJS Modules:
+An AngularJS module defines an application.
+The module is a container for the different parts of an application.
+The module is a container for the application controllers.
+Controllers always belong to a module.
+
+Creating Module:
+A module is created by using the AngularJS function angular.module
+<div ng-app="myApp">...</div>
+<script>
+var app = angular.module("myApp", []); 
+</script>
+Now you can add controllers, directives, filters, and more, to your AngularJS application.
+
+Adding a Controller
+<div ng-app="myApp" ng-controller="myCtrl">  //Add a controller to your application
+{{ firstName + " " + lastName }}
+</div>
+<script>
+var app = angular.module("myApp", []);
+app.controller("myCtrl", function($scope) {  // refer to the controller with the ng-controller directive:
+    $scope.firstName = "John";
+    $scope.lastName = "Doe";
+});
+</script>
+
+Adding a Directive:
+<div ng-app="myApp" w3-test-directive></div>
+<script> 
+var app = angular.module("myApp", []);
+app.directive("w3TestDirective", function() {
+    return {
+        template : "I was made in a directive constructor!"
+    };
+});
+</script>
+
+Create New Directives
+New directives are created by using the .directive function.
+To invoke the new directive, make an HTML element with the same tag name as the new directive.
+When naming a directive, you must use a camel case name, w3TestDirective, but when invoking it,
+you must use - separated name, w3-test-directive
+Four ways of invoking directives:
+Element name
+Attribute
+Class
+Comment
+<body ng-app="myApp">
+<w3-test-directive></w3-test-directive>			// first way
+<div w3-test-directive></div>					// second way
+<div class="w3-test-directive"></div>			// 3rd    way
+<!-- directive: w3-test-directive -->			// 4th  way
+<script>
+var app = angular.module("myApp", []);
+app.directive("w3TestDirective", function() {
+    return {
+        template : "<h1>Made by a directive!</h1>"
+    };
+});
+</script>
+</body>
+Restrictions
+You can restrict your directives to only be invoked by some of the methods.
+app.directive("w3TestDirective", function() {
+    return {
+        restrict : "A", 		// E for Element name, A for Attribute, C for Class, M for Comment
+        template : "<h1>Made by a directive!</h1>"
+    };
+	
+Application Status
+The ng-model directive can provide status for application data (invalid, dirty, touched, error):
+<form ng-app="" name="myForm" ng-init="myText = 'post@myweb.com'">
+    Email:
+    <input type="email" name="myAddress" ng-model="myText" required>
+    <h1>Status</h1>
+    {{myForm.myAddress.$valid}}
+    {{myForm.myAddress.$dirty}}
+    {{myForm.myAddress.$touched}}
+</form>
+The ng-model directive provides CSS classes for HTML elements, depending on their status:
+<style>
+input.ng-invalid {
+    background-color: lightblue;
+}
+</style>
+<body>
+<form ng-app="" name="myForm">
+    Enter your name:
+    <input name="myName" ng-model="myText" required>
+</form>
+Status Summary: 
+ng-empty
+ng-not-empty
+ng-touched
+ng-untouched
+ng-valid
+ng-invalid
+ng-dirty
+ng-pending
+ng-pristine
+
+AngularJS Data Binding: 
+synchronization between the model and the view.
+AngularJS applications usually have a data model. The data model is a 
+collection of data available for the application.
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope) {
+    $scope.firstname = "John";
+    $scope.lastname = "Doe";
+});
+
+HTML View
+The HTML container where the AngularJS application is displayed, is called the view.
+The view has access to the model, When data in the model changes, the view reflects the change, 
+and when data in the view changes, the model is updated as well. This happens immediately and 
+automatically, which makes sure that the model and the view is updated at all times.
+
+AngularJS Controllers
+AngularJS controllers control the data of AngularJS applications.
+AngularJS controllers are regular JavaScript Objects. created by a standard JavaScript object constructor.
+AngularJS will invoke the controller with a $scope object.
+In AngularJS, $scope is the application object 
+A controller can also have methods (variables as functions):
+app.controller('personCtrl', function($scope) {
+$scope.fullName = function() {
+        return $scope.firstName + " " + $scope.lastName;
+    };
+});
+
+AngularJS Scope
+The scope is the binding part between the HTML (view) and the JavaScript (controller).
+is an object with the available properties and methods.
+is available for both the view and the controller.
+Then the scope is the Model.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
