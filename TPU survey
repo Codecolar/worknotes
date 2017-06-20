@@ -1,0 +1,69 @@
+为什么要有神经网络处理器：CPU/GPU用于智能信息的处理时，效率十分低下，谷歌大脑项目用了1.6万个CPU核
+跑了7天才完成猫脸识别。为了追求更高的识别能力，神经网络的规模正在快速增长。目前阻碍DeepLearning发
+展的很大的一个瓶颈就是速度了。他认为要克服这个瓶颈，神经网络处理器是迄今为止最好解决方案。
+
+回顾计算的历史，我们会发现一个从通用计算走向专用计算的一个细分趋势:
+图形处理-> GPU
+信号处理-> DSP
+认知处理-> 神经网络处理器
+
+要说效能的话，我们可以摆一点数据：1GHz, 0.485W@65nm, 通用CPU 1/10的面积，100的性能。(深度学习领域)
+2012年的成果来看，在计算DNN,CNN,MLP,SOM等人工神经网络算法时，他们可以用CPU(Xeon E5-4620)和GPU(K20M)
+十分之一的面积，分别达到CPU-117倍,GPU-1.1倍的性能。
+
+主要的优点有两个：
+1、由于硬件的支持，效率的提升是成数量级的。
+2、DianNao支持任意规模的神经网络！
+传统的神经网络芯片的做法是把硬件运算单元和算法神经元一一对应起来，这样一来只能对一个固定的神经网
+络进行计算。他们采用了对小尺度神经网络分时复用的方法来支持任意规模的神经网络。
+
+从08年到16年的这八年里，陈老师课题组针对神经网络处理器做了一系列的出色研究：
+12年国际首个神经网络硬件测试集
+13年国际首个深度学习处理器 DianNao（电脑）：ASPLOS'14最佳论文 亚洲首获计算机硬件A类会议最佳论文
+14年国际首个深度学习多核处理器         DaDianNao（大电脑）：MICRO'14最佳论文    
+15年国际首个通用机器学习处理器        PuDianNao（普电脑）：ASPLOS'15    
+15年摄像头上的智能识别IP        ShiDianNao（视电脑） ISCA'15    
+16年国际首个神经网络通用指令集        DianNaoYu（电脑语）ISCA2016接收，分数第一    
+小预告：        TingDianNao（听电脑）也快出来啦
+
+目前也在和华为三星等一系列企业洽谈合作。
+
+Lots of proceedings in several domains of science (machine-learning, neurobiology, physics etc) 
+show that neural networks are increasingly relevant to computer architecture community.
+
+The Gartner hype curve: Technology trigger, peak of inflated expectations, trough of disillusionment, 
+slope of enlightment, plateau of productivity.
+
+The hype curve of Neural Networks: atypical, had a long and complicated history.
+Initial perceptron: excitement but only linear separability. Multi-Layer perceptron, non-linear separability.
+Cybenko's theorem: MLP can approximate any continuous function with arbitrary accuracy using a 
+single layer.
+SVM became a classifier with better theoretical properties than ANNs and outperforms ANNs.(second disillusionment)
+Since 2006: with the emergence of DNN, situation has changed.
+
+Deep Networks (NIPS neural info processing systems 2006): certain types of ANNs outperform SVMs on
+a broad range of tasks by increasing the size of layers. Experimental evidence provided by Bengio' 
+group and others makes ANNs the state-of-the-art classifiers again.
+which directly leads to the convergence of application focus and trends. (all tend to use NN methods)
+
+Anyway DNNs do require a large amount of computational capabilities, but there does exist the 
+"Dark Silicon" problem. As a result, possible evolution of computer architecture in DNN domain
+may go towards heterogeneous systems: program decomposed into "sequence of algorithms", with 
+each algorithm mapped onto one or a few accelerators at any given time: a fraction of transistors
+used at any given time which circumvents "Dark Silicon" issue.
+
+Heterogeneous accelerators: CPU、GPU、FPGA、ASIC. So which one?
+ASIC power efficient but not flexible, FPGA flexible but less power efficient.
+Right direction: multi-purpose ASICs which target several generic and fine-grain algorithms.
+ANN is a candidate algorithm for multi-purpose ASICs.
+Four major types of algorithms which ANNs are good at: Classification, Clustering, Approximation,
+Optimization.
+Quote from Pradeep Dubey, author of RMS article:
+To advance what we do with computers we need computers that can model events, objects and 
+concepts based on what we show the computers and the data accessible to them.
+
+
+
+
+
+
