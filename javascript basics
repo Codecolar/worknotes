@@ -1,0 +1,413 @@
+JavaScript :
+JavaScript is the programming language of HTML and the Web.
+JavaScript Can Change HTML Content.
+	document.getElementById('demo').innerHTML = 'Hello JavaScript';
+	document.getElementById("demo").style.fontSize = "25px";
+Why Study JavaScript?
+JavaScript is one of the 3 languages all web developers must learn:
+   1. HTML to define the content of web pages
+   2. CSS to specify the layout of web pages
+   3. JavaScript to program the behavior of web pages
+   
+JavaScript Where To:
+<script></script>(both in head and body) or attribute: onclick="script content" or external source code
+
+JavaScript can "display" data in different ways:
+	Writing into an HTML element, using innerHTML.
+	Writing into the HTML output using document.write().
+	Writing into an alert box, using window.alert().
+	Writing into the browser console, using console.log().
+
+
+JavaScript syntax:
+JavaScript statements are composed of:Values + Operators = Expressions, Keywords, and Comments.
+Values: Fixed values are called literals. Variable values are called variables.
+	Literals: Numbers, Strings(single or double quotes)
+	Variables: var x;
+	
+JavaScript Identifiers: Case sensetive
+	In JavaScript, the first character must be a letter, an underscore (_), or a dollar sign ($).
+	
+JavaScript Character Set: JavaScript uses the Unicode character set.
+
+JavaScript White Space: JavaScript ignores multiple spaces.
+
+JavaScript Functions: JavaScript Code Blocks, define statements to be executed together.
+
+Keywords: 
+	loops:
+		do ... while, for, break, continue, 
+		for (x in person) {
+			text += person[x];
+		}
+	conditions:
+		if ... else, switch
+	error handling:
+		try ... catch
+		
+Comments: same as C language
+
+Re-Declaring JavaScript Variables:
+If you re-declare a JavaScript variable, it will not lose its value.
+
+JavaScript Comparison Operators:
+	Operator	Description
+==	equal to
+===	equal value and equal type
+!=	not equal
+!==	not equal value or not equal type
+>	greater than
+<	less than
+>=	greater than or equal to
+<=	less than or equal to
+?	ternary operator
+
+JavaScript Type Operators:
+	Operator	Description
+typeof	Returns the type of a variable
+instanceof	Returns true if an object is an instance of an object type
+
+
+JavaScript Data Types:
+JavaScript Types are Dynamic.
+var length = 16;                               // Number
+var lastName = "Johnson";                      // String
+var x = {firstName:"John", lastName:"Doe",fullName:function(){return this.first+last;}};    // Object  x.firstName
+var cars = ["Saab", "Volvo", "BMW"];           // Array   cars[0]
+
+Primitive Data
+A primitive data value is a single simple data value with no additional properties and methods.
+The typeof operator can return one of these primitive types:
+string
+number
+boolean
+null
+undefined
+
+Complex Data
+The typeof operator can return one of two complex types:
+function
+object
+
+Any variable can be emptied, by setting the value to undefined or null. The type will also be undefined.
+Difference Between Undefined and Null
+typeof undefined           // undefined
+typeof null                // object
+null === undefined         // false
+null == undefined          // true
+
+JavaScript Function Syntax:
+function name(parameter1, parameter2, parameter3) {
+    code to be executed
+}
+function parameters are value assigned.
+The () Operator Invokes the Function.
+Function could be used as variable value.
+When a JavaScript variable is declared with the keyword "new", the variable is created as an object.
+
+JavaScript Object Methods:
+Methods are stored in properties as function definitions.
+
+JavaScript Scope:Scope is the set of variables you have access to.
+	In JavaScript, objects and functions are also variables.
+	In JavaScript, scope is the set of variables, objects, and functions you have access to.
+	
+Variables declared within a JavaScript function, become LOCAL to the function.
+A variable declared outside a function, becomes GLOBAL.
+If you assign a value to a variable no matter inside or outside a function that has not been declared, 
+it will automatically become a GLOBAL variable.
+The global scope is the window object. All global variables belong to the window object
+var carName = "Volvo";		// code here can use window.carName
+ 
+The Lifetime of JavaScript Variables
+The lifetime of a JavaScript variable starts when it is declared.
+Local variables are deleted when the function is completed.
+In a web browser, global variables are deleted when you close the browser window (or tab),
+but remains available to new pages loaded into the same window.
+
+JavaScript Events:
+HTML events are "things" that happen to HTML elements.
+When JavaScript is used in HTML pages, JavaScript can "react" on these events.
+
+JavaScript Strings:
+Special Characters:  use the \ escape character.
+break up a code line within a text string with a single backslash:"Hello \
+Dolly!";
+String Methods and Properties: Primitive values, like "John Doe", cannot have properties or methods.
+But with JavaScript, methods and properties are also available to primitive values, because JavaScript
+treats primitive values as objects when executing methods and properties.
+
+JavaScript Math Object: Math
+Math.PI; Math.round(); Math.pow, sqrt, abs.... or round, pow, sqrt, abs, sin....
+Unlike other global objects, the Math object has no constructor. Methods and properties are static.
+All methods and properties (constants) can be used without creating a Math object first.
+
+JavaScript Date Object: Date
+Different with Math object, Date is not static within JavaScript, but we need to create Date object with
+new Date() constructor.
+
+JavaScript Array Object: Created with new Array() or []
+Array Elements Can Be Objects so You can have objects in an Array. You can have functions in an Array. 
+You can have arrays in an Array.
+The Difference Between Arrays and Objects
+In JavaScript, arrays use numbered indexes.  
+In JavaScript, objects use named indexes.
+how to determine a variable is an array or not: Array.isArray() or instanceof Array
+
+What Is a Regular Expression?
+a sequence of characters that forms a search pattern.
+Syntax: /pattern/modifiers;
+RegExp Object: /  /     example: /e/.test("The best things in life are free!");
+
+Error handling:
+try { 
+        if(x == "") throw "empty";
+        if(isNaN(x)) throw "not a number";
+        x = Number(x);
+        if(x < 5) throw "too low";
+        if(x > 10) throw "too high";
+    }
+    catch(err) {
+        message.innerHTML = "Input is " + err;
+    }
+	finally {
+    Block of code to be executed regardless of the try / catch result
+}
+
+JavaScript Hoisting:
+Hoisting is JavaScript's default behavior of moving declarations to the top.
+JavaScript only hoists declarations, not initializations.
+Function Hoisting
+Earlier in this tutorial, you learned about "hoisting".
+Hoisting is JavaScript's default behavior of moving declarations to the top of the current scope.
+Hoisting applies to variable declarations and to function declarations.
+
+JavaScript Forms API:
+checkValidity()...
+
+Objects summary:
+In JavaScript, almost "everything" is an object.
+Booleans can be objects (if defined with the new keyword)
+Numbers can be objects (if defined with the new keyword)
+Strings can be objects (if defined with the new keyword)
+Dates are always objects                  
+Maths are always objects                //static
+Regular expressions are always objects	//  /   /
+Arrays are always objects 		//[]
+Functions are always objects	
+Objects are always objects    {}
+
+Ways of Creating a JavaScript Object:
+1. Using an Object Literal: var person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"};
+2. Using the JavaScript Keyword new: var person = new Object(); person.firstName = "John";
+3. Using an Object Constructor: object type that can be used to create many objects of this type.
+	function person(first, last, age, eye) {
+    this.firstName = first;
+    this.lastName = last;
+    this.age = age;
+    this.eyeColor = eye;
+	}
+	var myFather = new person("John", "Doe", 50, "blue");
+	var myMother = new person("Sally", "Rally", 48, "green");
+	
+	
+The this Keyword
+In JavaScript, the thing called "this", is the object that "owns" the JavaScript code.
+The value of "this", when used in a function, is the object that "owns" the function.
+The value of "this", when used in an object, is the object itself.
+The "this" keyword in an object constructor does not have a value. It is only a substitute for the new object.
+The value of "this" will become the new object when the constructor is used to create an object.
+
+JavaScript Objects are Mutable
+Objects are mutable: They are addressed by reference, not by value.
+If person is an object, the following statement will not create a copy of person:
+var x = person;  // This will not create a copy of person.
+
+
+JavaScript Object Prototypes:
+Every JavaScript object has a prototype. The prototype is also an object.
+All JavaScript objects inherit their properties and methods from their prototype.
+Objects created using an object literal, or with new Object(), inherit from a 
+prototype called Object.prototype.
+The Object.prototype is on the top of the prototype chain.
+
+
+Adding Properties and Methods to Objects:
+Adding a new method to an existing object is also easy:
+myFather.name = function () {
+    return this.firstName + " " + this.lastName;
+};
+
+Adding Properties to a Prototype:
+Person.nationality = "English";  //Person is a prototype
+
+Adding Methods to a Prototype
+PrototypeName.prototype.newProperty or newMethod = ...
+
+JavaScript Function Definitions: both declarations and expressions or Function() constructor
+Function Declarations: 
+function functionName(parameters) {
+  code to be executed
+}
+function expression: 
+var x = function (a, b) {return a * b};
+The Function() Constructor:
+var myFunction = new Function("a", "b", "return a * b");
+
+Self-Invoking Functions:
+Function expressions will execute automatically if the expression is followed by ().
+(function () {
+    var x = "Hello!!";      // I will invoke myself
+})();
+
+JavaScript Function Parameters:
+A JavaScript function does not perform any checking on parameter values (arguments).
+Function parameters are the names listed in the function definition.
+Function arguments are the real values passed to (and received by) the function.
+JavaScript functions have a built-in object called the arguments object.
+x = sumAll(1, 123, 500, 115, 44, 88);
+function sumAll() {
+    var i, sum = 0;
+    for (i = 0; i < arguments.length; i++) {
+        sum += arguments[i];
+    }
+    return sum;
+}
+
+Arguments are Passed by Value
+Objects are Passed by Reference
+
+JavaScript Closures:
+JavaScript variables can belong to the local or global scope.
+Global variables can be made local (private) with closures.
+All functions have access to the global scope.  
+In fact, in JavaScript, all functions have access to the scope "above" them.
+JavaScript supports nested functions. Nested functions have access to the scope "above" them.
+function add() {
+    var counter = 0;
+    function plus() {counter += 1;}
+    plus();    
+    return counter; 
+}
+This could have solved the counter dilemma, if we could reach the plus() function from the outside.
+We also need to find a way to execute counter = 0 only once.
+We need a closure.
+var add = (function () {
+    var counter = 0;
+    return function () {return counter += 1;}
+})();
+add();
+The variable add is assigned the return value of a self-invoking function.
+The self-invoking function only runs once. It sets the counter to zero (0), and returns a function expression.
+This way add becomes a function. The "wonderful" part is that it can access the counter in the parent scope.
+This is called a JavaScript closure. It makes it possible for a function to have "private" variables.
+The counter is protected by the scope of the anonymous function, and can only be changed using the add function.
+
+JavaScript HTML DOM
+When a web page is loaded, the browser creates a Document Object Model of the page.
+The HTML DOM model is constructed as a tree of Objects of HTML tags.
+With the object model, JavaScript gets all the power it needs to create dynamic HTML: CRUD React to DOM events
+
+What is the DOM?
+The DOM is a W3C (World Wide Web Consortium) standard.  a platform and language-neutral interface that allows
+programs and scripts to dynamically access and update the content, structure, and style of a document.
+
+What is the HTML DOM?
+The HTML DOM is a standard object model and programming interface for HTML. It defines:
+The HTML elements as objects
+The properties of all HTML elements
+The methods to access all HTML elements
+The events for all HTML elements
+In the DOM, all HTML elements are defined as objects.
+programming interface is the properties and methods of each object.
+
+The HTML DOM Document Object
+The document object represents your web page.
+
+Interfaces:
+Finding HTML Elements: Id, Tag, Class
+Changing HTML Elements: innerHTML, attribute, style
+Adding and Deleting Elements
+Adding Events Handlers: onclick
+Finding HTML Objects: document.URL, links, anchors, cookie...
+
+HTML Dom Object events: HTML element attributes, script obj.events, 
+
+JavaScript HTML DOM EventListener
+document.getElementById("myBtn").addEventListener("click", displayDate);
+addEventListener() method attaches an event handler to an element without
+overwriting existing event handlers.
+
+Add an Event Handler to the Window Object:
+indow.addEventListener("resize", function(){
+
+Event Bubbling or Event Capturing?
+addEventListener(event, function, useCapture); useCapture true or false
+
+Navigating Between DOM Nodes
+document.getElementById("demo").firstChild, parentNode, nextSibind,... .nodeValue
+
+JavaScript Window - The Browser Object Model (BOM)
+no official standards for the Browser Object Model (BOM).
+modern browsers have implemented (almost) the same methods and properties for 
+JavaScript interactivity, it is often referred to, as methods and properties of the BOM.
+The window object is supported by all browsers. It represents the browser's window.
+All global JavaScript objects, functions, and variables automatically become members of the window object.
+Global variables are properties of the window object.
+Global functions are methods of the window object.
+Even the document object (of the HTML DOM) is a property of the window object:
+window.document.getElementById("header");
+window.open() - open a new window
+window.close() - close the current window
+window.moveTo() -move the current window
+window.resizeTo() -resize the current window
+
+window.screen, location, history, navigator, popup alert, timing, cookies
+All window objects can be written without the window prefix.
+Location: current page address (URL) and to redirect the browser to a new page.
+Navigator: 
+navigator.appName
+navigator.appCodeName
+navigator.platform
+
+JavaScript has three kind of popup boxes: alert, confirm, prompt
+window.alert or alert
+
+JavaScript can be executed in time-intervals. This is called timing events.
+window object allows execution of code at specified time intervals.
+These time intervals are called timing events.
+The two key methods to use with JavaScript are:
+setTimeout(function, milliseconds)
+Executes a function, after waiting a specified number of milliseconds.
+setInterval(function, milliseconds)
+Same as setTimeout(), but repeats the execution of the function continuously.
+
+JavaScript Cookies:
+Cookies let you store user information in web pages.
+Cookies are data, stored in small text files, on your computer.
+When a browser requests a web page from a server, cookies belonging to the page 
+is added to the request. This way the server gets the necessary data to "remember" 
+information about users.
+document.cookie = "username=John Doe; expires=Thu, 18 Dec 2013 12:00:00 UTC; path=/";
+By default, the cookie is deleted when the browser is closed
+With a path parameter, you can tell the browser what path the cookie belongs to. 
+By default, the cookie belongs to the current page.
+var x = document.cookie;
+The old cookie could be overwritten.
+
+JSON: Exchanging Data
+When exchanging data between a browser and a server, the data can only be text.
+JSON is text, and we can convert any JavaScript object into JSON, and send JSON to the server.
+We can also convert any JSON received from the server into JavaScript objects.
+Sending data:
+var myObj = { "name":"John", "age":31, "city":"New York" };
+var myJSON = JSON.stringify(myObj);
+window.location = "demo_json.php?x=" + myJSON;
+Receiving data:
+var myJSON = '{ "name":"John", "age":31, "city":"New York" }';
+var myObj = JSON.parse(myJSON);
+document.getElementById("demo").innerHTML = myObj.name;
+
+jQuery Syntax:
+$(selector).action()
+With jQuery you select (query) HTML elements and perform "actions" on them.
