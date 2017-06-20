@@ -1,0 +1,221 @@
+HTML describes the structure of Web pages using markup
+HTML elements are the building blocks of HTML pages
+HTML elements are represented by tags
+Browsers do not display the HTML tags, but use them to render the content of the page
+
+The <head> element has nothing to do with HTML headings, <head> element contains meta information about
+ the document
+The following tags describe metadata: <title>, <style>, <meta>, <link>, <script>, and <base>.
+The <title> element specifies a title for the document
+The visible part of the HTML document is between <body> and </body>.
+
+The <!DOCTYPE> declaration represents the document type, and helps browsers to display web pages correctly.
+
+Attributes provide additional information about HTML elements.
+Attributes: Single or Double Quotes?
+-Double quotes around attribute values are the most common in HTML, but single quotes can also be used.
+
+Spaces and lines: 
+With HTML, you cannot change the output by adding extra spaces or extra lines in your HTML code.
+The browser will remove any extra spaces and extra lines when the page is displayed
+solution:
+Text inside a <pre> element is displayed in a fixed-width font (usually Courier), and it preserves
+ both spaces and line breaks:
+
+HTML styles:
+<tagname style="property:value;">
+
+--------- CSS ----------
+CSS can be added to HTML elements in 3 ways:
+-Inline - by using the style attribute in HTML elements
+-Internal - by using a <style> element in the <head> section
+-External - by using an external CSS file
+
+Internal CSS:
+<head>
+<style>
+body {background-color: powderblue;}
+h1   {color: blue;}
+p    {color: red;}
+</style>
+</head>
+
+External CSS:
+<head>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+CSS Padding:
+The CSS padding property defines a padding (space) between the text and the border:
+CSS Margin:
+The CSS margin property defines a margin (space) outside the border:
+
+The id Attribute:
+<p id="p01">I am different</p>
+#p01 {
+    color: blue;
+}
+
+The class Attribute:
+<p class="error">I am different</p>
+p.error {
+    color: red;
+}
+
+Links:
+a:link visited hover active{} //pseudo-selector of CSS 
+target attribute: _blank _self _parent _top framename
+
+Default display value for every HTML element:
+Every HTML element has a default display value depending on what type of element it is.
+The default display value for most elements is block or inline.
+
+Block-level Elements:
+A block-level element always starts on a new line and takes up the full width available.
+
+Inline Elements:
+An inline element does not start on a new line and only takes up as much width as necessary.
+
+HTML Grouping Tags
+Tag	Description
+<div>	Defines a section in a document (block-level)
+<span>	Defines a section in a document (inline)
+
+The class Attribute:
+<style>
+div.someclass {
+    background-color: black;
+    color: white;
+    margin: 20px 0 20px 0;
+    padding: 20px;
+} 
+</style>
+<div class="someclass"></div>
+
+HTML Iframes:
+An iframe is used to display a web page within a web page.
+<iframe src="URL"></iframe>
+
+HTML Layout Elements
+Websites often display content in multiple columns (like a magazine or newspaper).
+
+HTML5 offers new semantic elements that define the different parts of a web page:
+<header> - Defines a header for a document or a section
+<nav> - Defines a container for navigation links
+<section> - Defines a section in a document
+<article> - Defines an independent self-contained article
+<aside> - Defines content aside from the content (like a sidebar)
+<footer> - Defines a footer for a document or a section
+<details> - Defines additional details
+<summary> - Defines a heading for the <details> element
+
+HTML Layout Techniques
+There are four different ways to create multicolumn layouts. Each way has its pros and cons:
+-HTML tables : Do NOT use tables for your page layout!
+-CSS float property : It is common to do entire web layouts using the CSS float property. 
+	Float is easy to learn - you just need to remember how the float and clear properties work. 
+	Disadvantages: Floating elements are tied to the document flow, which may harm the flexibility.
+-CSS framework : If you want to create your layout fast, you can use a framework, like Bootstrap.
+-CSS flexbox : Flexbox is a new layout mode in CSS3.Use of flexbox ensures that elements behave predictably
+	when the page layout must accommodate different screen sizes and different display devices. 
+	Disadvantages: Does not work in IE10 and earlier.
+	
+HTML Responsive Web Design:
+Responsive Web Design makes your web page look good on all devices, is about using CSS and HTML to resize, 
+hide, shrink, enlarge, or move the content to make it look good on any screen:
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+HTML Computer Code Elements
+Tag	Description
+<code>	Defines programming code
+<kbd>	Defines keyboard input 
+<samp>	Defines computer output
+<var>	Defines a variable
+<pre>	Defines preformatted text
+
+HTML Entities:
+Reserved characters in HTML must be replaced with character entities.
+Characters that are not present on your keyboard can also be replaced by entities.
+
+HTML Encoding (Character Sets):
+To display an HTML page correctly, a web browser must know which character set (character encoding) to use.
+ASCII was the first character encoding standard (also called character set). ASCII defined 127 different alphanumeric 
+characters that could be used on the internet: numbers (0-9), English letters (A-Z), and some special characters like 
+! $ + - ( ) @ < > .
+ANSI (Windows-1252) was the original Windows character set, with support for 256 different character codes.
+ISO-8859-1 was the default character set for HTML 4. This character set also supported 256 different character codes.
+Because ANSI and ISO-8859-1 were so limited, the default character encoding was changed to UTF-8 in HTML5.
+UTF-8 (Unicode) covers almost all of the characters and symbols in the world.
+
+URL Encoding:
+URLs can only be sent over the Internet using the ASCII character-set. If a URL contains characters outside the ASCII
+set, the URL has to be converted.
+URL encoding converts non-ASCII characters into a format that can be transmitted over the Internet.
+URL encoding replaces non-ASCII characters with a "%" followed by hexadecimal digits.
+URLs cannot contain spaces. URL encoding normally replaces a space with a plus (+) sign, or %20.
+
+HTML Forms:
+HTML <form> element defines a form that is used to collect user input
+The <input> element is the most important form element.
+<input type="text">	    Defines a one-line text input field
+<input type="radio">	Defines a radio button (for selecting one of many choices)
+<input type="submit">	Defines a submit button (for submitting the form)
+The Action Attribute:
+<form action="/action_page.php">
+The action attribute defines the action to be performed when the form is submitted.
+If the action attribute is omitted, the action is set to the current page.
+The Method Attribute:
+The method attribute specifies the HTTP method (GET or POST) to be used when submitting the form data:
+<form action="/action_page.php" method="get/post">
+The default method when submitting form data is GET. when GET is used, the submitted form data will be
+visible in the page address field:
+Always use POST if the form data contains sensitive or personal information. The POST method does not
+display the submitted form data in the page address field.
+POST has no size limitations, and can be used to send large amounts of data.
+The Name Attribute:
+Each input field must have a name attribute to be submitted.
+If the name attribute is omitted, the data of that input field will not be sent at all.
+
+What is HTML Canvas?
+The HTML <canvas> element is used to draw graphics, on the fly, via JavaScript.
+The <canvas> element is only a container for graphics. You must use JavaScript to actually draw the graphics.
+Canvas has several methods for drawing paths, boxes, circles, text, and adding images.
+<canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;">
+</canvas>
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+var img = document.getElementById("scream");
+ctx.drawImage(img,10,10);
+
+What is SVG?
+SVG stands for Scalable Vector Graphics
+SVG is used to define graphics for the Web
+The HTML <svg> element is a container for SVG graphics.
+SVG has several methods for drawing paths, boxes, circles, text, and graphic images.
+<svg width="100" height="100">
+  <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
+</svg>
+
+HTML5 Video
+<video width="320" height="240" controls>
+  <source src="movie.mp4" type="video/mp4">
+  <source src="movie.ogg" type="video/ogg">
+Your browser does not support the video tag.
+</video>
+
+Constraint Validation HTML Input Attributes
+Attribute	Description
+disabled	Specifies that the input element should be disabled
+max	Specifies the maximum value of an input element
+min	Specifies the minimum value of an input element
+pattern	Specifies the value pattern of an input element
+required	Specifies that the input field requires an element
+type 	Specifies the type of an input element
+
+Constraint Validation CSS Pseudo Selectors
+Selector	Description
+:disabled	Selects input elements with the "disabled" attribute specified
+:invalid	Selects input elements with invalid values
+:optional	Selects input elements with no "required" attribute specified
+:required	Selects input elements with the "required" attribute specified
+:valid	Selects input elements with valid values
