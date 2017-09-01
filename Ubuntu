@@ -27,7 +27,10 @@ service: service [service_name] action_we_want_the_service_to_to
 alternative way of start/stop/restart/.. a service: systemctl action service_name 
 
 schedule the task: 
-contab
+contab: m h dom mon dow command
+
+code::blocks: ide for c\c++\fortran
+jet brains: ide with same style for various languages
 
 
 
