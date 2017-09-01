@@ -1,0 +1,39 @@
+differences between bios efi MBR bootloader grub
+
+image search: linux distribution timeline
+install/remove/upgrade: apt-get install/remove/upgrade program name
+search: apt-cache search key word
+check  locally and remotely: apt-cache policy key word
+install locally: dpkg -i program_file_name.deb
+
+file permitions and ownship:
+chown owner:group file_name 
+chmod 644 file_name
+rm -rf dir_name
+mv、touch、cp、mkdir 
+find dir_name_in_which_we_are_going_to_find -type [fd] -[i]name "some pattern" -perm 0644 -size [+-][0-9][kMG] -not -maxdepth [1-9] [-exec another command {} +]
+
+find things in files: grep
+grep [-in] "pattern" files_to_find 
+tee: pipe the result to a file while output it on the screen at the same time
+top: show  realtime applications
+ps: show the entile list of running processes 
+pgrep: show the process id of following application name
+kill -9: kill the app of the following process id
+killall [process_name]: kill all instances 
+
+services: special types of linux processes 
+service: service [service_name] action_we_want_the_service_to_to
+alternative way of start/stop/restart/.. a service: systemctl action service_name 
+
+schedule the task: 
+contab
+
+
+
+
+
+
+
+
+
