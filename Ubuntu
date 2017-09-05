@@ -32,6 +32,90 @@ contab: m h dom mon dow command
 code::blocks: ide for c\c++\fortran
 jet brains: ide with same style for various languages
 
+git:
+install git on Ubuntu: apt-get install git git-extras
+
+meteor:
+create app with js
+
+meteor-react-tutorial:
+time point: 4:00:00
+
+mysql apache php: set up a lamp stack 
+apt-get install apache2 php5 mysql-server php5-common
+systemctl start apache2
+chown -R user:user /var/www
+vim /etc/apache2/envvars
+edit export APACHE_RUN_USER=user_name
+     export APACHE_RUN_GROUP=user_group
+systemctl restart apache2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
