@@ -24,3 +24,6 @@ PCIe switch 3 uses - https://www.diodes.com/design/support/technical-articles/pe
 PCIe bar register     
 linux driver - communication with hardware  
 PCIe driver  
+
+numerical analysis of standford
+AI class of MIT
