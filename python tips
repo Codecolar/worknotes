@@ -1,0 +1,18 @@
+1. Should all Python classes extend object? Are there any potential problems with not extending object?
+  In Python 2, not inheriting from object will create an old-style class, which, amongst other effects, 
+  bcauses type to give different results:
+  >>> class Foo: pass
+  ... 
+  >>> type(Foo())
+  <type 'instance'>
+  vs.
+  >>> class Bar(object): pass
+  ... 
+  >>> type(Bar())
+  <class '__main__.Bar'>
+  
+  Also the rules for multiple inheritance are different in ways. 
+  All good documentation that I've seen about MI describes new-style classes.
+  Finally, old-style classes have disappeared in Python 3, and inheritance from object has become implicit. 
+  So, always prefer new style classes unless you need backward compat with old software.
+  ref: https://docs.python.org/release/2.5.2/ref/node33.html
